@@ -23,7 +23,7 @@ $pageTitle = "Brad's PHP Blog | $title";
   </head>
   <body>
     <main>
-      <h1>Introduction to PHP</h1>
+      <h1><?=$title?></h1>
       <p><?="By: $author"?></p>
       <p>
        <?=$body?>
