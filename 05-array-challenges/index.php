@@ -8,7 +8,10 @@
   4. Get the amount of numbers in the array and put into a variable.
   5. Print out 'The sum of the {amount} numbers is: {sum} '. For example, if the array is [1, 2, 3, 4, 5], the output should be 'The sum of the 5 numbers is: 15'. 
 */
-echo '<h3>Sum Of An Array</h3>';
+$numbers =[1,2,3,4,5];
+$sum = array_sum($numbers);
+$amount = count($numbers);
+echo "<h3>The sum of the {$amount} numbers is: {$sum} </h3>";
 
 /*
   Challenge 2: Colors array
@@ -24,7 +27,12 @@ You should end up with the following array: ['yellow', 'pink', 'blue', 'red', 'p
 echo '<h3>Colors Array</h3>';
 
 $colors = ['red', 'blue', 'green', 'yellow'];
-
+$colors = array_reverse($colors); 
+array_push($colors, 'purple');
+array_push($colors, 'orange');
+$colors[1] = 'pink';
+array_pop($colors);
+print_r($colors);
 /*
   Challenge 3: Job listings array
 
@@ -35,3 +43,14 @@ $colors = ['red', 'blue', 'green', 'yellow'];
 */
 
 echo '<h3>Job Listings</h3>';
+
+$jobs = [
+['id' => '1', 'job_title' => 'developer', 'company' => 'apple', 'contact_email' => 'dev@nomail.com', 'contact_phone' => 'xxxxx', 'skills' => ['c#', 'c++', 'agile']], 
+['id' => '2', 'job_title' => 'dentist', 'company' => 'happydent', 'contact_email' => 'drill@nooil.com', 'contact_phone' => 'xxxxxx', 'skills'=> ['Drilling and not for oil']], 
+['id' => '3', 'job_title' => 'guru', 'company' => 'yoga_studioB', 'contact_email' => 'namaste@aum.com', 'contact_phone' => 'yyyyyyyy', 'skills' => ['peace']], 
+];
+array_push($jobs, ['id' => '4', 'job_title' => 'safety inspector', 'company' => 'springfield powerplant', 'contact_email' => 'mrx.com', 'contact_phone' => '055555555', 'skills' => ['sleeping', 'eating', 'doh', 'record meltowns']]);
+ 
+echo $jobs[1]['job_title'];
+echo '<br/>';
+echo $jobs[2]['skills'][0];
